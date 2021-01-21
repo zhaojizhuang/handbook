@@ -29,8 +29,8 @@ spec:
       faas.oortgslb.com: |
     network:
       domainTemplate: |-
-        {{if index .Annotations "my.func.io/subdomain" -}}
-          {{- index .Annotations "my.func.io/subdomain" -}}
+        {{if index .Annotations "my.func/subdomain" -}}
+          {{- index .Annotations "my.func/subdomain" -}}
         {{else -}}
           {{- .Name}}.{{.Namespace -}}
         {{end -}}
