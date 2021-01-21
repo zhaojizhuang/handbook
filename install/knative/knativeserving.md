@@ -1,6 +1,6 @@
 ## 安装 Knative Serving
 
-> 此处通过 `operator` 的方式进行安装
+> 此处通过 `operator` 的方式进行安装,此处安装的是 `0.19` 版本
 
 ### 1. 安装 operator deploy 和对应的 CRD
 
