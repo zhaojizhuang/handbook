@@ -6,7 +6,7 @@
 
 参考 https://knative.dev/v0.19-docs/install/knative-with-operators/
 
-### 2. 通过 CR 安装 KnativeServing
+### 2. 通过 CR 安装 KnativeServing 组件
 
 ```yaml
 apiVersion: operator.knative.dev/v1alpha1
