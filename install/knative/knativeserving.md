@@ -21,7 +21,7 @@ spec:
     defaults:
       container-concurrency: "50"
     autoscaler:
-      enable-scale-to-zero: "false"
+      enable-scale-to-zero: "true"
     deployment:
       # replace queue
       queueSidecarImage: zhaojizhuang66/serving/cmd/queue:v0.19.0
