@@ -4,6 +4,16 @@
 
 ### 1. 安装 istio 的operator 和crd
 
+ 通过 istioctl 生成对应的yaml 
+
+```yaml
+istioctl operator  dump --hub zhaojizhuang66/istio > istio_operator.yaml
+```
+
+```yaml
+kubectl apply -f istio_operator.yaml # 安装 operator 和 CR 资源
+```
+
 
 
 ### 2. 安装对应的 CR 资源
