@@ -40,13 +40,13 @@ spec:
   # image
   registry:
     override:
-      # replace images
-      activator: zhaojizhuang66/serving/cmd/activator:v0.19.0
-      webhook: zhaojizhuang66/serving/cmd/webhook:v0.19.0
-      controller: zhaojizhuang66/serving/cmd/controller:v0.19.0
-      autoscaler: zhaojizhuang66/serving/cmd/autoscaler:v0.19.0
-      autoscaler-hpa: zhaojizhuang66/serving/cmd/autoscaler-hpa:v0.19.0
-      istio-webhook/webhook: zhaojizhuang66/net-istio/cmd/webhook:v0.19.0
-      networking-istio: zhaojizhuang66/net-istio/cmd/controller:v0.19.0
-      migrate: zhaojizhuang66/vendor/knative.dev/pkg/apiextensions/storageversion/cmd/migrate:v0.19.0
+      # replace images 此处可换为自己的私有镜像
+      activator: gcr.io/knative-releases/knative.dev/serving/cmd/activator:v0.19.0
+      webhook: gcr.io/knative-releases/knative.dev/serving/cmd/webhook:v0.19.0
+      controller: gcr.io/knative-releases/knative.dev/serving/cmd/controller:v0.19.0
+      autoscaler: gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler:v0.19.0
+      autoscaler-hpa: gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler-hpa:v0.19.0
+      istio-webhook/webhook: gcr.io/knative-releases/knative.dev/net-istio/cmd/webhook:v0.19.0
+      networking-istio: gcr.io/knative-releases/knative.dev/net-istio/cmd/controller:v0.19.0
+      migrate: zhaojizhuang66/migrate:v0.19.0
 ```

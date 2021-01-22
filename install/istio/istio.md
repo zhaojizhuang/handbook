@@ -4,10 +4,10 @@
 
 ### 1. 安装 istio 的operator 和crd
 
- 通过 istioctl 生成对应的yaml 
+ 通过 istioctl 生成对应的yaml ,其中 `--hub docker.io/istio`可以换成自己的私有仓库地址，docker.io 为默认生成的
 
 ```yaml
-istioctl operator  dump --hub zhaojizhuang66/istio > istio_operator.yaml
+istioctl operator  dump --hub docker.io/istio > istio_operator.yaml
 ```
 
 ```yaml
@@ -41,7 +41,7 @@ spec:
   values:
     global:
       istioNamespace: istio-system
-      hub: zhaojizhang66/istio
+      hub: docker.io/istio  # 此处可以改为自己的私有仓库
       tag: 1.8.1
       imagePullPolicy: IfNotPresent
       proxy:
