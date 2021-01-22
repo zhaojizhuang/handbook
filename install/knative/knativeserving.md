@@ -6,6 +6,14 @@
 
 参考 https://knative.dev/v0.19-docs/install/knative-with-operators/
 
+
+
+```yaml
+kubectl apply -f https://github.com/knative/operator/releases/download/v0.19.0/operator.yaml
+```
+
+
+
 ### 2. 通过 CR 安装 KnativeServing 组件
 
 ```yaml
