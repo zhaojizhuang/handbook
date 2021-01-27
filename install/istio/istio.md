@@ -45,7 +45,7 @@ spec:
       tag: 1.8.1
       imagePullPolicy: IfNotPresent
       proxy:
-        clusterDomain: svc.cluster.local
-      trustDomain: svc.cluster.local
+        clusterDomain: cluster.local
+      trustDomain: cluster.local
 ```
 

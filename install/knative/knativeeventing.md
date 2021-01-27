@@ -25,4 +25,34 @@ metadata:
 spec:
   version: 0.19.0
   defaultBrokerClass: MTChannelBasedBroker
+  config:
+    br-default-channel:
+      channelTemplateSpec: |
+        apiVersion: messaging.knative.dev/v1beta1
+        kind: NatssChannel
+    br-defaults:
+      default-br-config: |
+        clusterDefault:
+          apiVersion: v1
+          brokerClass: MTChannelBasedBroker
+          kind: ConfigMap
+          name: config-br-default-channel
+          namespace: knative-eventing
+  registry:
+    override:
+      eventing-controller/eventing-controller: zhaojizhuang66/eventing/cmd/controller:v0.19.0
+      eventing-webhook/eventing-webhook: zhaojizhuang66/eventing/cmd/webhook:v0.19.0
+      imc-controller/controller: zhaojizhuang66/eventing/cmd/in_memory/channel_controller:v0.19.0
+      imc-dispatcher/dispatcher: zhaojizhuang66/eventing/cmd/in_memory/channel_dispatcher:v0.19.0
+      mt-broker-controller/mt-broker-controller: zhaojizhuang66/eventing/cmd/mtchannel_broker:v0.19.0
+      mt-broker-filter/filter: zhaojizhuang66/eventing/cmd/mtbroker/filter:v0.19.0
+      mt-broker-ingress/ingress: zhaojizhuang66/eventing/cmd/mtbroker/ingress:v0.19.0
+      pingsource-mt-adapter/dispatcher: zhaojizhuang66/eventing/cmd/mtping:v0.19.0
+      sugar-controller/controller: zhaojizhuang66/eventing/cmd/sugar_controller:v0.19.0
+
+
+
+
+
+
 ```
