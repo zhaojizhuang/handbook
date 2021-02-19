@@ -11,5 +11,14 @@
 `kubectl exec -it curl sh`
 
 ```shell
-
+curl -v "my-service.default" \
+  -X POST \
+  -H "Ce-Id: say-hello" \
+  -H "Ce-Specversion: 1.0" \
+  -H "Ce-Type: greeting" \
+  -H "Ce-Source: not-sendoff" \
+  -H "Content-Type: application/json" \
+  -d '{"msg":"Hello Knative!"}'
 ```
+
+其中 `http://broker-ingress.knative-eventing.svc.cluster.local/event-example/default` 为要发送的事件的地址，可以是 `broker` 地址，`filter` 地址，或者 `event receiver` 的地址

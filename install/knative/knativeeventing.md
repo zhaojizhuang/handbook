@@ -49,10 +49,12 @@ spec:
       mt-broker-ingress/ingress: zhaojizhuang66/eventing/cmd/mtbroker/ingress:v0.19.0
       pingsource-mt-adapter/dispatcher: zhaojizhuang66/eventing/cmd/mtping:v0.19.0
       sugar-controller/controller: zhaojizhuang66/eventing/cmd/sugar_controller:v0.19.0
-
-
-
-
-
-
 ```
+
+### 3. channel 安装
+
+默认情况下 knative eventing 安装后，会自动安装 in memory 模式的 channel，这种模式的 channel 只能用于调试，不推荐生产环境用。
+
+所以要安装 生产环境可用的 channel，这里安装 natss stream
+
+#### 1. 首先安装 natss
