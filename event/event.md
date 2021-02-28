@@ -11,11 +11,11 @@
 `kubectl exec -it curl sh`
 
 ```shell
-curl -v "my-service.default" \
+curl -v "http://broker-ingress.faas.svc.cluster.local/default/default" \
   -X POST \
   -H "Ce-Id: say-hello" \
   -H "Ce-Specversion: 1.0" \
-  -H "Ce-Type: greeting" \
+  -H "Ce-Type: dev.knative.sources.ping" \
   -H "Ce-Source: not-sendoff" \
   -H "Content-Type: application/json" \
   -d '{"msg":"Hello Knative!"}'
