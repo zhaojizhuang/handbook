@@ -11,7 +11,7 @@
 `kubectl exec -it curl sh`
 
 ```shell
-curl -v "http://broker-ingress.faas.svc.cluster.local/default/default" \
+curl -v "http://event-display.default" \
   -X POST \
   -H "Ce-Id: say-hello" \
   -H "Ce-Specversion: 1.0" \
